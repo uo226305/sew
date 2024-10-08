@@ -21,22 +21,27 @@
 <body>
     <header>
         <h1>F1 Desktop</h1>
-        <!-- Datos con el contenidos que aparece en el navegador -->
+        <!-- Datos con el contenidos que aparece en el navegador 
+            Corrección: faltaban titles: accesibilidad -->
         <nav>
-            <a href="index.html">Index</a>
-            <a href="piloto.html">Piloto</a>
-            <a href="noticias.html">Noticias</a>
-            <a href="calendario.html">Calendario</a>
-            <a href="meteorologia.html">Meteorología</a>
-            <a href="circuito.html">Circuito</a>
-            <a href="viajes.html">Viajes</a>
+            <a href="index.html" title="Índice">Index</a>
+            <a href="piloto.html" title="Piloto">Piloto</a>
+            <a href="noticias.html" title="Noticias">Noticias</a>
+            <a href="calendario.html" title="Calendario">Calendario</a>
+            <a href="meteorologia.html" title="Meteorología">Meteorología</a>
+            <a href="circuito.html" title="Circuito">Circuito</a>
+            <a href="viajes.html" title="Viajes">Viajes</a>
         </nav>
     </header>
+
+    <!-- TAREAS LAB04: PONER ENTRE HEADER Y MAIN: MIGAS -->
+
     <main>
         <section>
             <h2>Sergio Pérez</h2>
             <!--Wikipedia/ https://www.redbull.com/es-es/conoce-sergio-perez-perfil-de-carrera-->
-            <!--Añadir imagen con picture + diferentes tamaños-->
+            <!--Añadir imagen con picture + diferentes tamaños
+                fallo: una cosa es el tamaño máx /min de la pantalla y otra el tamaño de la imagen (proporcional dentro de ese tamaño) -->
             <picture>
                 <!-- Para móviles -->
                 <source media="(max-width:465px)" srcset="multimedia/sergio-perez-red-bull-racing_mobile.png">
@@ -45,9 +50,10 @@
                 <!-- Para monitores -->
                 <source media="(min-width:800px)" srcset="multimedia/sergio-perez-red-bull-racing_monitor.png">
                 <!-- Imagen de respaldo, en formato webp -->
-                <img src="multimedia/sergio-perez-red-bull-racing_monitor.png" alt="Imagen de Sergio Pérez para Red Bull" />
+                <img src="multimedia/sergio-perez-red-bull-racing_monitor.png"
+                    alt="Imagen de Sergio Pérez para Red Bull" />
             </picture>
-            
+
 
             <h3>Datos personales</h3>
             <ul>
@@ -67,7 +73,7 @@
 
         <section>
             <h3> Biografía</h3>
-        <!--<figure>
+            <!--<figure>
         <img alt="Sergio Pérez para Red Bull" src="multimedia/sergio-perez-red-bull-racing.webp" />
         <figcaption>Imagen de Sergio Pérez para Red Bull </figcaption>
         </figure>-->
@@ -187,7 +193,7 @@
             <!--
     <video src="multimedia/victoria_sergio_perez.mp4" controls preload="auto">
     </video>
-        -preguntar: ¿no necesito src? me salían 2 reproductores
+        NOTAS LAB04: redimensionar video de forma ext y añadir formatos adaptables
     -->
             <video controls preload="auto">
                 <source src="multimedia/victoria_sergio_perez.mp4" type="video/mp4" />
@@ -308,34 +314,41 @@
                 <li>Red Bull Racing Honda</li>
                 <li>Oracle Red Bull Racing</li>
             </ol>
-            <!--Lista definición (pit stop, pole, rake, efecto suelo...)-->
-            <h3>Definiciones</h3>
-            <dl>
-                <dt>Pit stop</dt>
-                <dd>parada en boxes para cambiar los neumáticos, hacer reparaciones o ajustes mecánicos, después de que
-                    ya
-                    no se
-                    pueda repostar.</dd>
-                <dt>Pole</dt>
-                <dd>término que designa el primer lugar en la parrilla de salida de una carrera.</dd>
-                <dt>Rake</dt>
-                <dd>describe la inclinación del coche de Fórmula 1 desde el morro hasta la parte trasera.</dd>
-                <dt>Efecto suelo</dt>
-                <dd>técnica aerodinámica que redefine la relación entre el monoplaza y la pista, utilizando el flujo de
-                    aire
-                    alrededor del vehículo para generar una presión diferencial que succiona el coche hacia el suelo.
-                </dd>
-                <dt>Gap</dt>
-                <dd>distancia en tiempo que hay entre pilotos.</dd>
-                <dt>DNF</dt>
-                <dd>(Did Not Finish) indica que el piloto no fue capaz de terminar la carrera y por lo tanto no cruzó la
-                    línea
-                    de meta.</dd>
-            </dl>
+            <!--Lista definición (pit stop, pole, rake, efecto suelo...)
+            ASIDE ESTA PARTE : SE PODRÍA MOVER A OTRO DOCU-->
+            <aside>
+                <h3>Definiciones</h3>
+                <dl>
+                    <dt>Pit stop</dt>
+                    <dd>parada en boxes para cambiar los neumáticos, hacer reparaciones o ajustes mecánicos, después de
+                        que
+                        ya
+                        no se
+                        pueda repostar.</dd>
+                    <dt>Pole</dt>
+                    <dd>término que designa el primer lugar en la parrilla de salida de una carrera.</dd>
+                    <dt>Rake</dt>
+                    <dd>describe la inclinación del coche de Fórmula 1 desde el morro hasta la parte trasera.</dd>
+                    <dt>Efecto suelo</dt>
+                    <dd>técnica aerodinámica que redefine la relación entre el monoplaza y la pista, utilizando el flujo
+                        de
+                        aire
+                        alrededor del vehículo para generar una presión diferencial que succiona el coche hacia el
+                        suelo.
+                    </dd>
+                    <dt>Gap</dt>
+                    <dd>distancia en tiempo que hay entre pilotos.</dd>
+                    <dt>DNF</dt>
+                    <dd>(Did Not Finish) indica que el piloto no fue capaz de terminar la carrera y por lo tanto no
+                        cruzó la
+                        línea
+                        de meta.</dd>
+                </dl>
+            </aside>
         </section>
 
-        <!--Preguntar x buen uso de aside-->
-        <aside>
+        <!--Corrección: esto no es aside, ya que tiene rel directa con piloto. Cambio a sección -->
+        <section>
             <!--Lista resultados más destacados (últimos 3 años, listas anidadas de varios tipos)-->
             <h3>Resultados recientes más destacados</h3>
             <!--Reestructurada en lista anidada-->
@@ -367,127 +380,127 @@
                     </ol>
                 </li>
             </ul>
-        </aside>
 
-        <!--Tabla resultados última temporada: puntos obtenidos, posición
-     en la clasificación final de la competición, poles, victorias y podios-->
-        <table>
-            <caption>Resultados temporada 2024 (en curso)</caption>
-            <tr>
-                <th id="circuito" scope="col">Circuito</th>
-                <th id="resultadoFinal" scope="col">Resultado final</th>
-                <th id="polePosition" scope="col">Pole position</th>
-                <th id="vueltaRápida" scope="col">Vuelta rápida</th>
-            </tr>
-            <tr>
-                <th id="Barhein" scope="row">BHR</th>
-                <td headers="Barhein resultadoFinal">2</td>
-                <td headers="Barhein polePosition">no</td>
-                <td headers="Barhein vueltaRápida">no</td>
-            </tr>
-            <tr>
-                <th id="ArabiaSaudí" scope="row">ARA</th>
-                <td headers="ArabiaSaudí resultadoFinal">2</td>
-                <td headers="ArabiaSaudí polePosition">no</td>
-                <td headers="ArabiaSaudí vueltaRápida">no</td>
-            </tr>
-            <tr>
-                <th id="Australia" scope="row">AUS</th>
-                <td headers="Australia resultadoFinal">5</td>
-                <td headers="Australia polePosition">no</td>
-                <td headers="Australia vueltaRápida">no</td>
-            </tr>
-            <tr>
-                <th id="Japan" scope="row">JPN</th>
-                <td headers="Japan resultadoFinal">2</td>
-                <td headers="Japan polePosition">no</td>
-                <td headers="Japan vueltaRápida">no</td>
-            </tr>
-            <tr>
-                <th id="China" scope="row">CHN</th>
-                <td headers="China resultadoFinal">3</td>
-                <td headers="China polePosition">no</td>
-                <td headers="China vueltaRápida">no</td>
-            </tr>
-            <tr>
-                <th id="Miami" scope="row">MIA</th>
-                <td headers="Miami resultadoFinal">4</td>
-                <td headers="Miami polePosition">no</td>
-                <td headers="Miami vueltaRápida">no</td>
-            </tr>
-            <tr>
-                <th id="EmiratosÁrabesUnidos" scope="row">EMI</th>
-                <td headers="EmiratosÁrabesUnidos resultadoFinal">8</td>
-                <td headers="EmiratosÁrabesUnidos polePosition">no</td>
-                <td headers="EmiratosÁrabesUnidos vueltaRápida">no</td>
-            </tr>
-            <tr>
-                <th id="Montreal" scope="row">MON</th>
-                <td headers="Montreal resultadoFinal">Retirado</td>
-                <td headers="Montreal polePosition"> - </td>
-                <td headers="Montreal vueltaRápida"> - </td>
-            </tr>
-            <tr>
-                <th id="Canada" scope="row">CAN</th>
-                <td headers="Canada resultadoFinal">Retirado</td>
-                <td headers="Canada polePosition"> - </td>
-                <td headers="Canada vueltaRápida"> - </td>
-            </tr>
-            <tr>
-                <th id="España" scope="row">ESP</th>
-                <td headers="España resultadoFinal">8</td>
-                <td headers="España polePosition">no</td>
-                <td headers="España vueltaRápida">no</td>
-            </tr>
-            <tr>
-                <th id="Austria" scope="row">AUT</th>
-                <td headers="Austria resultadoFinal">7</td>
-                <td headers="Austria polePosition">no</td>
-                <td headers="Austria vueltaRápida">no</td>
-            </tr>
-            <tr>
-                <th id="GranBretaña" scope="row">GBR</th>
-                <td headers="GranBretaña resultadoFinal">17</td>
-                <td headers="GranBretaña polePosition">no</td>
-                <td headers="GranBretaña vueltaRápida">no</td>
-            </tr>
-            <tr>
-                <th id="Hungría" scope="row">HUN</th>
-                <td headers="Hungría resultadoFinal">7</td>
-                <td headers="Hungría polePosition">no</td>
-                <td headers="Hungría vueltaRápida">no</td>
-            </tr>
-            <tr>
-                <th id="Bélgica" scope="row">BEL</th>
-                <td headers="Bélgica resultadoFinal">7</td>
-                <td headers="Bélgica polePosition">no</td>
-                <td headers="Bélgica vueltaRápida">sí</td>
-            </tr>
-            <tr>
-                <th id="PaísesBajos" scope="row">NED</th>
-                <td headers="PaísesBajos resultadoFinal">6</td>
-                <td headers="PaísesBajos polePosition">no</td>
-                <td headers="PaísesBajos vueltaRápida">no</td>
-            </tr>
-            <tr>
-                <th id="Italia" scope="row">ITA</th>
-                <td headers="Italia resultadoFinal">8</td>
-                <td headers="Italia polePosition">no</td>
-                <td headers="Italia vueltaRápida">no</td>
-            </tr>
-            <tr>
-                <th id="Azerbaiyán" scope="row">AZE</th>
-                <td headers="Azerbaiyán resultadoFinal">17</td>
-                <td headers="Azerbaiyán polePosition">no</td>
-                <td headers="Azerbaiyán vueltaRápida">no</td>
-            </tr>
-            <tr>
-                <th id="Singapur" scope="row">SIN</th>
-                <td headers="Singapur resultadoFinal">10</td>
-                <td headers="Singapur polePosition">no</td>
-                <td headers="Singapur vueltaRápida">no</td>
-            </tr>
-        </table>
+        <!--Tabla resultados última temporada: puntos obtenidos, posición en la clasificación final de la competición,
+        poles, victorias y podios. NOTA: EVITAR SCROLL HORIZONTAL SIEMPRE EN TABLAS: adaptabilidad (se pierde el foco) -->
+            <table>
+                <caption>Resultados temporada 2024 (en curso)</caption>
+                <tr>
+                    <th id="circuito" scope="col">Circuito</th>
+                    <th id="resultadoFinal" scope="col">Resultado final</th>
+                    <th id="polePosition" scope="col">Pole position</th>
+                    <th id="vueltaRápida" scope="col">Vuelta rápida</th>
+                </tr>
+                <tr>
+                    <th id="Barhein" scope="row">BHR</th>
+                    <td headers="Barhein resultadoFinal">2</td>
+                    <td headers="Barhein polePosition">no</td>
+                    <td headers="Barhein vueltaRápida">no</td>
+                </tr>
+                <tr>
+                    <th id="ArabiaSaudí" scope="row">ARA</th>
+                    <td headers="ArabiaSaudí resultadoFinal">2</td>
+                    <td headers="ArabiaSaudí polePosition">no</td>
+                    <td headers="ArabiaSaudí vueltaRápida">no</td>
+                </tr>
+                <tr>
+                    <th id="Australia" scope="row">AUS</th>
+                    <td headers="Australia resultadoFinal">5</td>
+                    <td headers="Australia polePosition">no</td>
+                    <td headers="Australia vueltaRápida">no</td>
+                </tr>
+                <tr>
+                    <th id="Japan" scope="row">JPN</th>
+                    <td headers="Japan resultadoFinal">2</td>
+                    <td headers="Japan polePosition">no</td>
+                    <td headers="Japan vueltaRápida">no</td>
+                </tr>
+                <tr>
+                    <th id="China" scope="row">CHN</th>
+                    <td headers="China resultadoFinal">3</td>
+                    <td headers="China polePosition">no</td>
+                    <td headers="China vueltaRápida">no</td>
+                </tr>
+                <tr>
+                    <th id="Miami" scope="row">MIA</th>
+                    <td headers="Miami resultadoFinal">4</td>
+                    <td headers="Miami polePosition">no</td>
+                    <td headers="Miami vueltaRápida">no</td>
+                </tr>
+                <tr>
+                    <th id="EmiratosÁrabesUnidos" scope="row">EMI</th>
+                    <td headers="EmiratosÁrabesUnidos resultadoFinal">8</td>
+                    <td headers="EmiratosÁrabesUnidos polePosition">no</td>
+                    <td headers="EmiratosÁrabesUnidos vueltaRápida">no</td>
+                </tr>
+                <tr>
+                    <th id="Montreal" scope="row">MON</th>
+                    <td headers="Montreal resultadoFinal">Retirado</td>
+                    <td headers="Montreal polePosition"> - </td>
+                    <td headers="Montreal vueltaRápida"> - </td>
+                </tr>
+                <tr>
+                    <th id="Canada" scope="row">CAN</th>
+                    <td headers="Canada resultadoFinal">Retirado</td>
+                    <td headers="Canada polePosition"> - </td>
+                    <td headers="Canada vueltaRápida"> - </td>
+                </tr>
+                <tr>
+                    <th id="España" scope="row">ESP</th>
+                    <td headers="España resultadoFinal">8</td>
+                    <td headers="España polePosition">no</td>
+                    <td headers="España vueltaRápida">no</td>
+                </tr>
+                <tr>
+                    <th id="Austria" scope="row">AUT</th>
+                    <td headers="Austria resultadoFinal">7</td>
+                    <td headers="Austria polePosition">no</td>
+                    <td headers="Austria vueltaRápida">no</td>
+                </tr>
+                <tr>
+                    <th id="GranBretaña" scope="row">GBR</th>
+                    <td headers="GranBretaña resultadoFinal">17</td>
+                    <td headers="GranBretaña polePosition">no</td>
+                    <td headers="GranBretaña vueltaRápida">no</td>
+                </tr>
+                <tr>
+                    <th id="Hungría" scope="row">HUN</th>
+                    <td headers="Hungría resultadoFinal">7</td>
+                    <td headers="Hungría polePosition">no</td>
+                    <td headers="Hungría vueltaRápida">no</td>
+                </tr>
+                <tr>
+                    <th id="Bélgica" scope="row">BEL</th>
+                    <td headers="Bélgica resultadoFinal">7</td>
+                    <td headers="Bélgica polePosition">no</td>
+                    <td headers="Bélgica vueltaRápida">sí</td>
+                </tr>
+                <tr>
+                    <th id="PaísesBajos" scope="row">NED</th>
+                    <td headers="PaísesBajos resultadoFinal">6</td>
+                    <td headers="PaísesBajos polePosition">no</td>
+                    <td headers="PaísesBajos vueltaRápida">no</td>
+                </tr>
+                <tr>
+                    <th id="Italia" scope="row">ITA</th>
+                    <td headers="Italia resultadoFinal">8</td>
+                    <td headers="Italia polePosition">no</td>
+                    <td headers="Italia vueltaRápida">no</td>
+                </tr>
+                <tr>
+                    <th id="Azerbaiyán" scope="row">AZE</th>
+                    <td headers="Azerbaiyán resultadoFinal">17</td>
+                    <td headers="Azerbaiyán polePosition">no</td>
+                    <td headers="Azerbaiyán vueltaRápida">no</td>
+                </tr>
+                <tr>
+                    <th id="Singapur" scope="row">SIN</th>
+                    <td headers="Singapur resultadoFinal">10</td>
+                    <td headers="Singapur polePosition">no</td>
+                    <td headers="Singapur vueltaRápida">no</td>
+                </tr>
+            </table>
+        </section>
 
         <h3>Para más información:</h3>
         <ul>

@@ -4,6 +4,11 @@
     UO: 226305
 */
 
+/*NOTA LAB04: Guardar colores que se van a utilizar, tras comprobar el contraste con 
+  https://webaim.org/resources/contrastchecker/ == SEGUROS PARA ACCESIBILIDAD
+  (no hacer conn variables xq puede haber errores x herencia)
+*/
+
 /* Especificidad: 001
 
   Colores de fondo, primer plano y familia de fuente para todos los elementos
