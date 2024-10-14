@@ -60,11 +60,11 @@ header p {
 }
 
 /*Especificidad: 002
-PRUEBA(no indicado en ejercicio): PONER ENLACES EN AZUL BEBÉ
+Color enlaces
 Advertencia: color de fondo se hereda de body
 */
 nav a, li a {
-  color: #7EC8E3;
+  color: #FFFF00FA;
 }
 
 /*Especificidad: 001
