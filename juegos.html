@@ -6,21 +6,26 @@
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
     <title>F1Desktop</title>
-    <meta name ="author" content ="Sara ADS" />
-    <meta name ="description" content ="Juegos" />
-    <meta name ="keywords" content ="juego, ganador" />
+    <meta name="author" content="Sara ADS" />
+    <meta name="description" content="Juegos" />
+    <meta name="keywords" content="juego, ganador" />
     <!--define ventana gráfica:-->
-    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- añadir el elemento link de enlace a la hoja de estilo dentro del <head> del documento html -->
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
     <!--Añadir favicon-->
     <link rel="icon" href="multimedia/favicon-256.png" />
 </head>
 
 <body>
     <header>
-        <h1>F1Desktop</h1>
+        <!--Migas:-->
+        <p> Estás en: <a href="index.html" title="Página principal"> Inicio</a> | Juegos </p>
+        <h1>
+            <a href="index.html" title="Página principal F1 Desktop"> F1 Desktop</a>
+        </h1>
         <nav>
             <a href="index.html" title="Índice">Index</a>
             <a href="piloto.html" title="Piloto">Piloto</a>
@@ -29,13 +34,17 @@
             <a href="meteorologia.html" title="Meteorología">Meteorología</a>
             <a href="circuito.html" title="Circuito">Circuito</a>
             <a href="viajes.html" title="Viajes">Viajes</a>
+            <a href="juegos.html" class="active" title="Juegos">Juegos</a>
+            
         </nav>
     </header>
-    <!-- Datos con el contenidos que aparece en el navegador -->
-    <h2>Juegos</h2>
-    <h3> Juegos relacionados con la F1</h3>
-    <p> En desarrollo</p>
 
+    <main>
+        <!-- Datos con el contenidos que aparece en el navegador -->
+        <h2>Juegos</h2>
+        <h3> Juegos relacionados con la F1</h3>
+        <p> En desarrollo</p>
+    </main>
 </body>
 
 </html>

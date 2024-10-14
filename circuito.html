@@ -6,21 +6,26 @@
     <!-- Datos que describen el documento -->
     <meta charset="UTF-8" />
     <title>F1Desktop</title>
-    <meta name ="author" content ="Sara ADS" />
-    <meta name ="description" content ="Circuito" />
-    <meta name ="keywords" content ="circuito, país, evento, paddock" />
+    <meta name="author" content="Sara ADS" />
+    <meta name="description" content="Circuito" />
+    <meta name="keywords" content="circuito, país, evento, paddock" />
     <!--define ventana gráfica:-->
-    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- añadir el elemento link de enlace a la hoja de estilo dentro del <head> del documento html -->
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
     <!--Añadir favicon-->
     <link rel="icon" href="multimedia/favicon-256.png" />
 </head>
 
 <body>
     <header>
-        <h1>F1Desktop</h1>
+        <!--Migas:-->
+        <p> Estás en: <a href="index.html" title="Página principal"> Inicio</a> | Circuito </p>
+        <h1>
+            <a href="index.html" title="Página principal F1 Desktop"> F1 Desktop</a>
+        </h1>
         <p> </p>
         <nav>
             <a href="index.html" title="Índice">Index</a>
@@ -28,15 +33,18 @@
             <a href="noticias.html" title="Noticias">Noticias</a>
             <a href="calendario.html" title="Calendario">Calendario</a>
             <a href="meteorologia.html" title="Meteorología">Meteorología</a>
-            <a href="circuito.html" title="Circuito">Circuito</a>
+            <a href="circuito.html" class="active" title="Circuito">Circuito</a>
             <a href="viajes.html" title="Viajes">Viajes</a>
+            <a href="juegos.html" title="Juegos">Juegos</a>
         </nav>
     </header>
-    <!-- Datos con el contenidos que aparece en el navegador -->
-    <h2>Circuito</h2>
-    <h3>Información sobre el próximo circuito</h3>
-    <p> En desarrollo</p>
 
+    <main>
+        <!-- Datos con el contenidos que aparece en el navegador -->
+        <h2>Circuito</h2>
+        <h3>Información sobre el próximo circuito</h3>
+        <p> En desarrollo</p>
+    </main>
 </body>
 
 </html>

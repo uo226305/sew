@@ -1,0 +1,23 @@
+/*Datos personales: 
+    Nombre: Sara Álvarez Dos Santos
+    UO: 226305
+*/
+
+/*
+NOTAS LAB04: 
+habitual advertencias redefiniciones: tipico error redef 1 pading/margin/border: solucionar 
+aplicando regla reloj / olvidar familia fuentes / fuentes + de 1 palabra: entre ""/ colores:
+ver herencia a ojo o en inspeccionar código (hh. desarrollador) + comprobar que es correcto
+advertencias redefiniciones flex: comentario tb
+*/
+
+/* Para aplicar esquemas de posicionamiento especifico al encabezado del proyecto <header>,
+que contiene el elemento <h1> y <nav>.
+Especificidad: 001 
+*/
+header {
+    display: flex;  /*eso hace que header se convierta en contenedor flexible
+                        + sus hijos son elementos flexibles*/
+    flex-direction: column;
+    /*¿wrap?*/
+}
