@@ -1,4 +1,199 @@
+
 /*Datos personales: 
     Nombre: Sara Álvarez Dos Santos
     UO: 226305
 */
+
+/*NOTA LAB04: Guardar colores que se van a utilizar, tras comprobar el contraste con 
+  https://webaim.org/resources/contrastchecker/ == SEGUROS PARA ACCESIBILIDAD
+  (no hacer conn variables xq puede haber errores x herencia)
+
+  Referencia colores:
+    -color de fondo body: 0C2D48
+    -color fondo cabecera: 125491
+    -color h1/nav: B8B8BCfc
+    -color letra body: FFFFFF
+    -color enlaces: 7EC8E3
+*/
+
+/* Especificidad: 001
+
+  Colores de fondo, primer plano y familia de fuente para todos los elementos
+  (body + descendientes)
+*/
+body {
+  font-family: Helvetica, Verdana, sans-serif;
+  background-color: #0C2D48;
+  color: #FFFFFF;
+}
+
+/* Color de fondo para elemento header
+ Especifidad:  001
+ Advertencia: color de primer plano se hereda de body
+*/
+header{
+  background-color: #125491;
+}
+
+/* Color de texto h1 y nav
+Especificidad: 001
+Advertencia: color de fondo se hereda de body
+*/
+h1, nav, h1 a, p a {
+  color: #FFFF00FA;
+  text-decoration: none;
+}
+
+/*Especificidad: 001
+Color de fondo se hereda de body
+*/
+h2, h3 {
+  font-weight: bolder;
+}
+
+/* Selector específico para las migas:
+Especifidad: 002
+Tamaño relativo para adaptabilidad      (revisar)
+*/
+header p {
+  font-size: smaller;
+}
+
+/*Especificidad: 002
+Color enlaces
+Advertencia: color de fondo se hereda de body
+*/
+nav a, li a {
+  color: #FFFF00FA;
+}
+
+/*Especificidad: 001
+*/
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+/*Especificidad: 011
+*/
+a:link {
+  font-weight: bolder;
+}
+/*Especificidad: 011
+*/
+a:visited {
+  font-weight: lighter;
+}
+/*Especificidad: 011
+Color de fondo se hereda de body
+*/
+a:focus {
+  color: black;
+  text-decoration: underline;
+}
+/*Especificidad: 011
+*/
+a:hover {
+  color: black;
+  border-bottom: 1px solid;
+  background: #a0af6f;
+}
+
+
+/* LISTAS */
+
+/*Especifidad: 001
+"Títulos" de elementos de la lista anidada
+*/
+ul {
+  font-weight: bolder;
+  list-style-type: square;
+}
+/*Especifidad: 001
+Elementos de listas no ordenadas
+*/
+ol {
+  margin-bottom: 2em;
+}
+/*Especifidad: 002
+Elementos de cada "título" en la lista anidada
+*/
+ul li {
+  margin-bottom: 0.5em;
+}
+/*Especifidad: 003
+Elementos de una lista no ordenada dentro de subsección
+*/
+h3 ul li {
+  font-weight: lighter;
+}
+
+/*Especifidad: 002
+Elementos de cada "título" en la lista anidada
+*/
+ol li {
+  font-weight: lighter;
+  margin-bottom: 0.5em;
+}
+
+
+/* LISTA DEFINICIÓN */
+/* Especifidadad: 002
+*/
+dl dt {
+  font-style: italic;
+  font-weight: bolder;
+}
+
+
+/* TABLA */
+/* Especifidadad: 001
+*/
+table {
+  table-layout: fixed;  /*tamaño de acuerdo con ancho de encabezado*/
+  width: 100%; /*ocupa el 100% de pantalla */
+  /*border-collapse: collapse;  /*evitar espacio entre el de la tabla x defecto. NO aplica a mi tabla*/
+  border: 3px solid #FFFF00FA;
+}
+
+/* Especifidadad: 001
+*/
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+/* ELEMENTOS MULTIMEDIA */
+/*usar encima @media only screen and (max-width: 600px), por ej,
+cuando se quieera hacer algo específico para un tamaño de dispositivo*/
+/* Especifidadad: 001
+*/
+video {
+  width:100%;
+  height:auto;
+}
+
+/* Especifidadad: 001
+La imagen responderá y se escalará automáticamente
+*/
+img {
+  width:100%;
+  height:auto;
+}
+
+
+/*Selector class permitido en ejercicio 9 de p3-html-css
+Especificidad: 
+*/
+.active {
+  color: #000000;
+  background-color: #a0af6f;
+}
+
+/* MEDIA QUERY: quitar migas de dispositivos móviles */
+@media only screen and (max-width: 465px) {
+  /*Especificidad: 002*/
+  header p {
+      display: none;
+  }
+}
